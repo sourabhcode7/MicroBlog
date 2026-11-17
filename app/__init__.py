@@ -7,6 +7,8 @@ app = Flask(__name__)
 # app stores that application.
 # In simple words: We are creating our web application and giving it the name app.
 
+app.config.from_object('config')
+
 from app import views
 
 #Why do we import views at the end?
