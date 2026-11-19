@@ -1,14 +1,14 @@
 from flask import Flask
 # Flask is a Python framework used to build web applications. 
 # We import the Flask class so that we can create our application.
-
+from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 # Here: Flask(__name__) creates a new Flask application.
 # app stores that application.
 # In simple words: We are creating our web application and giving it the name app.
 
 app.config.from_object('config')
-
+db = SQLAchemy(app)
 from app import views
 
 #Why do we import views at the end?
